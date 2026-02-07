@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kouakou Search</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+ background-image: url("image-ordinateur-portable-haute-technologie-pour-amateurs-numeriques_1281529-2035.avif");
+  color:white;
+}
+
+/* Container */
+.box {
+  text-align:center;
+  background: rgba(28, 123, 179, 0.6);
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(37, 151, 204, 0.7);
+}
+
+/* Logo */
+.logo {
+  font-size:40px;
+  font-weight:bold;
+  color:#38bdf8;
+}
+
+/* Input */
+input {
+  width:300px;
+  padding:12px;
+  border-radius:25px;
+  border:none;
+  outline:none;
+  font-size:16px;
+}
+
+/* Button */
+button {
+  margin-top:15px;
+  padding:10px 25px;
+  background:#38bdf8;
+  border:none;
+  border-radius:20px;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover {
+  background:#0ea5e9;
+}
+
+/* Search engine buttons */
+.engines button {
+  margin:5px;
+  background:#22c55e;
+}
+.engines button:hover {
+  background:#16a34a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <div class="logo">🔎 Kouakou Search</div>
+  <p>Le moteur de recherche ivoirien 🇨🇮</p>
+
+  <input id="query" placeholder="🔎Rechercher sur Internet...">
+  <br>
+  <button onclick="searchGoogle()">Recherche Google</button>
+
+  <div class="engines">
+    <button onclick="searchBing()">Bing</button>
+    <button onclick="searchDuck()">DuckDuckGo</button>
+  </div>
+</div>
+
+<script>
+function searchGoogle() {
+  let q = document.getElementById("query").value;
+  window.location.href = "https://www.google.com/search?q=" + q;
+}
+
+function searchBing() {
+  let q = document.getElementById("query").value;
+  window.location.href = "https://www.bing.com/search?q=" + q;
+}
+
+function searchDuck() {
+  let q = document.getElementById("query").value;
+  window.location.href = "https://duckduckgo.com/?q=" + q;
+}
+</script>
+
+</body>
+</html>
